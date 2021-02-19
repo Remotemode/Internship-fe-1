@@ -5,7 +5,7 @@ import {FirebaseContext} from './firebaseContext';
 import {firebaseReducer} from './firebaseReducer';
 import {SHOW_LOADER, ADD_ARTICLES} from './firebaseReducer'
 
-const url = 'https://acrticles-default-rtdb.europe-west1.firebasedatabase.app';
+const url = 'https://acrticles-default-rtdb.europe-west1.firebasedatabase.app'
 
 export const FirebaseState = ({children}) => {
     const initialState = {

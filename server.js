@@ -2,19 +2,19 @@ const express = require('express');
 const path = require('path');
 const port = process.env.PORT || 8080;
  
- // здесь у нас происходит импорт пакетов и определяется порт нашего сервера
+ //here we import packages and determine the port of our server
  const app = express();
  
- //здесь наше приложение отдаёт статику
+ //here our application gives statics
  app.use(express.static(__dirname));
  app.use(express.static(path.join(__dirname, 'build')));
  
- //простой тест сервера
+ //simple server test
  app.get('/ping', function (req, res) {
   return res.send('pong');
  });
  
- //обслуживание html
+ //html service
  app.get('/*', function (req, res) {
  res.sendFile(path.join(__dirname, 'build', 'index.html'));
  });
